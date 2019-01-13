@@ -19,6 +19,9 @@ body{
   position: relative;
   margin: 0 auto;
 }
+.container{
+  padding: 20px;
+}
 .user-photo{
   width:60px !important;
   height: 55px;
@@ -41,6 +44,21 @@ body{
   background-color: rgb(246, 213, 218);
   cursor: pointer;
 }
-.container{
-  padding: 20px;
+.user-name:hover{
+  color: rgb(18, 40, 163);
+  font-weight: bold;
+}
+.button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.add-btn{
+  background-color: #3f51b5;
+  font-family: $robotoRegular;
+  color:#fff;
+  margin: 10px !important;
+}
+.add-btn:hover{
+  background-color: #1c2c86;
 }

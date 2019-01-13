@@ -2,17 +2,17 @@
   <mat-card class="example-card" *ngFor='let user of users$ | async'>
     <div class="users-list">
       <div class="container">
-          <mat-card-title>{{user.name}}</mat-card-title>
-        <img mat-card-image class="user-photo" src="{{user.picture}}" alt="user-photo">
+        <mat-card-title class="user-name">{{user.name}}</mat-card-title>
         <mat-card-content>
           <div class="user-cart">
             <p class="user-company">Company: {{user.company}}</p>
-            <p class="user-adress">Address: {{user.address}}</p>
             <p class="user-adress">Gender: {{user.gender}}</p>
-            <!-- <button  class="ord-btn"(click)="addToCart(item)">Заказать</button> -->
           </div>
         </mat-card-content>
-       </div>
+      </div>
     </div>
   </mat-card>
+  <div class="button">
+    <button mat-raised-button color="primary" (click)="openDialog()" class="add-btn">Add user</button>
+  </div>
 </div>
