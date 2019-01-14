@@ -7,9 +7,17 @@ import { Observable } from 'rxjs';
 })
 export class UsersService {
 
- public constructor (private http: HttpClient) {}
+  public constructor(private http: HttpClient) { }
 
- public getUsers(): Observable<any[]> {
+  public getUsers(): Observable<any[]> {
     return this.http.get<any[]>('http://localhost:3000/users');
+  }
+
+  public getUserById(id): Observable<any> {
+    return this.http.get<any>(`http://localhost:3000/users/${id}`);
+  }
+
+  public createUser(body): Observable<any> {
+    return this.http.post<any>('http://localhost:3000/users', JSON.stringify(body));
   }
 }

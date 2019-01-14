@@ -1,53 +1,61 @@
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
-</div>
-<div class="jumbotron">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-          <div class="form-group">
-            <label>Name</label>
-            <input type="text" formControlName="name" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label>Balance</label>
-            <input type="text" formControlName="balance" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input type="text" formControlName="email" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label>Age</label>
-            <input type="text" formControlName="age" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label>Eye color</label>
-            <input type="text" formControlName="eyeColor" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label>Gender</label>
-            <input type="text" formControlName="gender" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label>Phone</label>
-            <input type="text" formControlName="phone" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label>Address</label>
-            <input type="text" formControlName="address" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label>About</label>
-            <input type="text" formControlName="about" class="form-control" />
-          </div>
-          <div class="form-group">
-            <button class="add-btn" mat-button [mat-dialog-close]="" cdkFocusInitial>Add user to list</button>
-          </div>
-        </form>
+<div class="popup">
+  <form [formGroup]="registerForm" (ngSubmit)="addToList(registerForm.value)">
+    <div class="form-group">
+      <div class="weight">
+        <label>Name</label>
+        <input type="text" formControlName="name" class="form-control" />
       </div>
     </div>
-  </div>
+    <div class="form-group">
+      <div class="weight">
+        <label>Balance</label>
+        <input type="text" formControlName="balance" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="weight">
+        <label>Email</label>
+        <input type="text" formControlName="email" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="weight">
+        <label>Age</label>
+        <input type="text" formControlName="age" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="weight">
+        <label>Eye color</label>
+        <input type="text" formControlName="eyeColor" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="weight">
+        <label>Gender</label>
+        <input type="text" formControlName="gender" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="weight">
+        <label>Phone</label>
+        <input type="text" formControlName="phone" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="weight">
+        <label>Address</label>
+        <input type="text" formControlName="address" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="weight">
+        <label>About</label>
+        <input type="text" formControlName="about" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <button class="add-btn" mat-button [mat-dialog-close] (click)="addToList(item)" cdkFocusInitial>Add user to list</button>
+    </div>
+  </form>
 </div>
