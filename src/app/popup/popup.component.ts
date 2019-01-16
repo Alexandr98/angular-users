@@ -32,6 +32,7 @@ export class PopupComponent implements OnInit {
       eyeColor: ['', Validators.required],
       gender: ['', Validators.required],
       phone: ['', Validators.required],
+      company: ['', Validators.required],
       address: ['', Validators.required],
       about: ['', Validators.required]
     });

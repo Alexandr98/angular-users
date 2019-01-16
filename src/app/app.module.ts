@@ -30,7 +30,7 @@ import { MatCheckboxModule, MatButtonModule } from '@angular/material';
     MatCheckboxModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
   ],
   entryComponents: [PopupComponent, UserComponent],
   exports: [PopupComponent],

@@ -49,13 +49,19 @@
       </div>
     </div>
     <div class="form-group">
+        <div class="weight">
+          <label>Company</label>
+          <input type="text" formControlName="company" class="form-control" />
+        </div>
+      </div>
+    <div class="form-group">
       <div class="weight">
         <label>About</label>
         <input type="text" formControlName="about" class="form-control" />
       </div>
     </div>
     <div class="form-group">
-      <button class="add-btn" mat-button [mat-dialog-close] (click)="addToList(item)" cdkFocusInitial>Add user to list</button>
+      <button class="add-btn" mat-button [mat-dialog-close] (click)="addToList($event)" cdkFocusInitial>Add user to list</button>
     </div>
   </form>
 </div>
